@@ -4,7 +4,7 @@ public class ITECCourseManager {
 
     public static void main(String[] args) {
 	// write your code here
-        // lab 6
+        // lab 6 EssProb2
         // new course
         ITECCourse itConcepts = new ITECCourse("Info Tech Concepts",
                 1100,30,"T3050");

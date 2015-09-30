@@ -12,7 +12,7 @@ public class ITECCourse {
     private int code;
     private ArrayList<String> students;
     private int maxStudents;
-    private String room;  // lab 6
+    private String room;  // lab 6 EssProb2
 
     //Constructor
     public ITECCourse(String courseName, int courseCode, int courseMaxStudents, String roomName) {
@@ -20,7 +20,7 @@ public class ITECCourse {
         this.code = courseCode;
         this.students = new ArrayList<String>();
         this.maxStudents = courseMaxStudents;
-        this.room = roomName; // lab 6
+        this.room = roomName; // lab 6 EssProb2
     } // end Constructor for ITECCourse
 
     public String getName() {
@@ -89,7 +89,7 @@ public class ITECCourse {
         } // end if-else
     }  // end method removeStudent
 
-    // stuff below added for Lab 6
+    // stuff below added for Lab 6 EssProb2
     public String getRoom() {
         return this.room;
     } // end getRoom - gets the name of the room

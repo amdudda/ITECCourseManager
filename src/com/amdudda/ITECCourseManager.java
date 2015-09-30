@@ -1,13 +1,15 @@
 package com.amdudda;
 
+import java.util.ArrayList;
+
 public class ITECCourseManager {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         // lab 6 EssProb2
         // new course
         ITECCourse itConcepts = new ITECCourse("Info Tech Concepts",
-                1100,30,"T3050");
+                1100, 30, "T3050");
         // enroll some students
         itConcepts.addStudent("Max");
         itConcepts.addStudent("Nancy");
@@ -15,7 +17,8 @@ public class ITECCourseManager {
         // print out the course info
         itConcepts.writeCourseInfo();
 
-/*  -- old code from class, can ignore
+// old code from class, can ignore most of this, see end of code
+// for more Lab6 stuff.
         ITECCourse maintenanceCourse = new ITECCourse("Microcomputer Systems Maintenance",
                 1310, 20, "t3010");
 
@@ -75,7 +78,22 @@ public class ITECCourseManager {
         smallCourse.setName("Very Small Course");
         // check our work
         System.out.println(smallCourse.getName());
-*/
+        // add some visual space between this chunk of output and the output for lab 6.
+        System.out.println("\n\n");
 
+// new code for lab 6 begins
+        // lab 6 EssProb3
+        // store the ITECCourse objects in an arraylist
+        ArrayList<ITECCourse> allCourses = new ArrayList<ITECCourse>();
+            allCourses.add(itConcepts);
+        allCourses.add(smallCourse);
+        allCourses.add(javaCourse);
+        allCourses.add(maintenanceCourse);
+
+        for (ITECCourse course:allCourses) {
+            System.out.println(course.getName() + " has " +
+                    course.getFreeSpaces() + " free spaces.");
+        } // end for
     } // end main
+
 }  // end ITECCourseManager

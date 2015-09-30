@@ -98,4 +98,9 @@ public class ITECCourse {
         this.room = roomName;
     } // end setRoom - changes the name of the room
 
+    // stuff below added for Lab 6 EssProb3
+    public int getFreeSpaces(){
+        // returns the number of open seats in a course
+        return this.maxStudents - this.getNumberOfStudents();
+    } // end method getFreeSpaces
 } // end class ITECCourse

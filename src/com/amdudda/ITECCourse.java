@@ -12,13 +12,15 @@ public class ITECCourse {
     private int code;
     private ArrayList<String> students;
     private int maxStudents;
+    private String room;  // lab 6
 
     //Constructor
-    public ITECCourse(String courseName, int courseCode, int courseMaxStudents) {
+    public ITECCourse(String courseName, int courseCode, int courseMaxStudents, String roomName) {
         this.name = courseName;
         this.code = courseCode;
         this.students = new ArrayList<String>();
         this.maxStudents = courseMaxStudents;
+        this.room = roomName; // lab 6
     } // end Constructor for ITECCourse
 
     public String getName() {
@@ -66,6 +68,7 @@ public class ITECCourse {
 
     public void writeCourseInfo() {
         System.out.println("Course Name: " + this.name);
+        System.out.println("Course Room: " + this.room); // lab 6
         System.out.println("Course Code: " + this.code);
         System.out.println(this.getNumberOfStudents() + " students enrolled: ");
         for (String student : this.students) {
@@ -85,5 +88,14 @@ public class ITECCourse {
             System.out.println(studentName + " was not found in " + this.name);
         } // end if-else
     }  // end method removeStudent
+
+    // stuff below added for Lab 6
+    public String getRoom() {
+        return this.room;
+    } // end getRoom - gets the name of the room
+
+    public void setRoom(String roomName) {
+        this.room = roomName;
+    } // end setRoom - changes the name of the room
 
 } // end class ITECCourse
